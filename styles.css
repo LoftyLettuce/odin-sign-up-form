@@ -5,6 +5,7 @@
   padding: 0;
   font-family: inherit;
   box-sizing: border-box;
+  font-size: inherit;
 }
 form
 {
@@ -21,6 +22,7 @@ body
   background-color: black;
   height: 100vh;
   width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .page-layout
 {
@@ -87,10 +89,11 @@ body
 }
 .logo-background figcaption
 {
+  ---textColor: white;
   position: absolute;
   bottom: 0;
   padding: 20px;
-  color: white;
+  color: var(---textColor);
   font-size: 12px;
   text-align: center;
   width: 100%;
@@ -98,5 +101,92 @@ body
 .logo-background>figcaption a,
 .logo-background>figcaption a:visited
 {
-  color: white;
+  color: var(---textColor);
+}
+.page-layout .form-layout
+{
+  ---padding-left: 5%;
+  ---padding-right: 15%;
+  display: flex;
+  flex-direction: column;
+  padding: 10% 0;
+  font-size: 18px;
+  background-color: whitesmoke;
+}
+.form-layout .text-bold
+{
+  padding: 0 var(---padding-right) 20px var(---padding-left);
+  font-weight: 800;
+}
+.form-layout form
+{
+  padding: 20px 0 10px 0;
+}
+form .form-content-layout
+{
+  background-color: white;
+  box-shadow: -3px 3px 3px #cacaca;
+  margin-bottom: 20px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 var(---padding-right) 0 var(---padding-left);
+}
+.form-content-layout h4
+{
+  font-size: 20px;
+}
+.form-content-layout div
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 10px;
+}
+.form-content-layout>div label
+{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  font-weight: 800;
+  color: darkslategrey;
+}
+.form-content-layout input
+{
+  font-size: 15px;
+  font-weight: 300;
+  border: #e5e7eb 1px solid;
+  border-radius: 3px;
+  padding: 5px var(---padding-right) 5px var(---padding-left);
+  width: 80%;
+}
+.form-content-layout input:valid
+{
+  background-color: white;
+}
+.form-content-layout input:focus
+{
+  outline: blue 1px solid;
+  border: none;
+  box-shadow: 3px 3px 3px #cacaca;
+}
+.form-content-layout input:invalid
+{
+  outline: red 1px solid;
+}
+.form-content-layout input + span::before
+{
+  content: "*Invalid email";
+  color: red;
+  font-weight: normal;
+  visibility: hidden;
+}
+.form-content-layout input:invalid + span::before
+{
+  visibility: visible;
+}
+.form-content-layout input[type="password"] + span::before
+{
+  content: "*Password do not match";
 }
