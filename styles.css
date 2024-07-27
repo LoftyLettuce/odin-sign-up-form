@@ -188,5 +188,5 @@ form .form-content-layout
 }
 .form-content-layout input[type="password"] + span::before
 {
-  content: "*Password do not match";
+  content: "*Password must contain a number,a letter(upper and lower) case, a symbol";
 }

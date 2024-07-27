@@ -42,8 +42,8 @@
             <label for="phone">PHONE NUMBER<input type="tel"></label>
           </div>
           <div>
-            <label for="pass">PASSWORD<input id="pass" type="password"><span></span></label>
-            <label for="re-pass">CONFIRM PASSWORD<input id="pass" type="password"><span></span></label>
+            <label for="pass">PASSWORD<input id="pass" type="password" pattern="(?=.*([a-z]))(?=.*[0-9])(?=.*[A-Z])(?=.*[\W]).*"><span></span></label>
+            <label for="re-pass">CONFIRM PASSWORD<input id="pass" type="password" pattern="(?=.*([a-z]))(?=.*[0-9])(?=.*[A-Z])(?=.*[\W]).*"><span></span></label>
           </div>
         </div>
         <button>Create Account</button>
