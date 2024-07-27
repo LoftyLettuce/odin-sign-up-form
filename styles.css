@@ -120,7 +120,7 @@ body
 }
 .form-layout form
 {
-  padding: 20px 0 10px 0;
+  padding: 20px 0 0 0;
 }
 form .form-content-layout
 {
@@ -131,7 +131,7 @@ form .form-content-layout
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 var(---padding-right) 0 var(---padding-left);
+  padding: 0 var(---padding-right) 0px var(---padding-left);
 }
 .form-content-layout h4
 {
@@ -189,4 +189,28 @@ form .form-content-layout
 .form-content-layout input[type="password"] + span::before
 {
   content: "*Password must contain a number,a letter(upper and lower) case, a symbol";
+}
+.form-layout button
+{
+  margin: 10px var(---padding-right) 20px var(---padding-left);
+  border-radius: 5px;
+  width: 12vw;
+  height: 5vh;
+  color: white;
+  background-color: #596D48;
+  border: none;
+  box-shadow: 3px 3px 3px #cacaca;
+}
+.form-layout p:last-child
+{
+  font-size: 16px;
+  padding: 0 var(---padding-right) 0 var(---padding-left);
+}
+.form-layout a:last-child,
+.form-layout a:last-child:visited
+{
+  font-style: none;
+  font-weight: 800;
+  text-decoration: none;
+  color: #596D48;
 }
