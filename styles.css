@@ -20,8 +20,8 @@ form
 body
 {
   background-color: black;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
 .page-layout
@@ -33,11 +33,6 @@ body
   margin: auto;
   background-color: white;
 }
-.page-layout .img-layout,
-.page-layout .form-layout
-{
-  width: 50%;
-}
 .page-layout .img-layout
 {
   position: relative;
@@ -45,9 +40,11 @@ body
   display: flex;
   flex-direction: column;
 }
-.page-layout .form-layout
+.img-layout .logo-background
 {
-  flex: 3 2 0;
+  height: 100%;
+  min-height: 100vh;
+  width: auto;
 }
 .img-layout .logo-positioning
 {
@@ -55,16 +52,10 @@ body
   position: absolute;
   top: 25%;
   width: 100%;
-  height: 15%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-.img-layout .logo-background
-{
-  height: 100%;
-  width: auto;
 }
 .logo-positioning img,
 .logo-positioning span
@@ -73,19 +64,19 @@ body
 }
 .logo-positioning span
 {
-  font-size: 0.8vw;
-  font-size: min(50px);
+  font-size: 80px;
   font-family: norse, 'Times New Roman', Times, serif;
+  margin: 5% 0 2.5% 0;
 }
 .logo-positioning img
 {
-  height: 90%;
+  height: 12vh;
+  width: auto;
 }
 .logo-background img
 {
   height: 100%;
-  width: auto;
-  width: min(100%);
+  width: 100%;
 }
 .logo-background figcaption
 {
@@ -105,17 +96,21 @@ body
 }
 .page-layout .form-layout
 {
+  flex: 3 2 0;
+}
+.page-layout .form-layout
+{
   ---padding-left: 5%;
   ---padding-right: 15%;
   display: flex;
   flex-direction: column;
-  padding: 10% 0;
+  justify-content: center;
   font-size: 18px;
   background-color: whitesmoke;
 }
 .form-layout .text-bold
 {
-  padding: 0 var(---padding-right) 20px var(---padding-left);
+  padding: 0 var(---padding-right) 5% var(---padding-left);
   font-weight: 800;
 }
 .form-layout form
@@ -126,15 +121,15 @@ form .form-content-layout
 {
   background-color: white;
   box-shadow: -3px 3px 3px #cacaca;
-  margin-bottom: 20px;
-  height: 30vh;
+  margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0 var(---padding-right) 0px var(---padding-left);
+  padding: 10px var(---padding-right) 10px var(---padding-left);
 }
 .form-content-layout h4
 {
+  ---padding-left: 0;
   font-size: 20px;
 }
 .form-content-layout div
@@ -194,8 +189,7 @@ form .form-content-layout
 {
   margin: 10px var(---padding-right) 20px var(---padding-left);
   border-radius: 5px;
-  width: 12vw;
-  height: 5vh;
+  padding: 10px 20px;
   color: white;
   background-color: #596D48;
   border: none;
